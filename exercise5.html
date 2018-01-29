@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Color Picker</title>
+    <link rel="stylesheet" href="exercise5.css">
+</head>
+<body>
+
+<div id="container">  
+<h3>CSS Color Displayer</h3>
+
+<p>Select a number from 0-255 for each color value:</p>
+    
+<div>
+Red: 
+<input type="text" id="input" value="0">
+</div>
+
+<div>
+Green: 
+<input type="text" id="input2" value="0">
+</div>  
+
+<div>
+Blue: 
+<input type="text" id="input3" value="0">
+</div>
+
+ <div>
+<button id="btn">Show me the color!</button>
+</div>
+  
+ <div id ="clearThis">
+     <form><input type="button" onClick="clearFunction()" value="Clear"></form>
+</div>
+    
+<div>
+<p id= "ouput" ></p>          
+</div>
+
+<div>
+<input type= "text" id="box">
+  
+</div>
+
+</div> <!-- end container -->
+
+<script>
+function clearFunction() {
+    document.getElementById("clearThis").reset();
+}
+</script>
+    
+    
+<script>
+
+function checkInp()
+{
+var x=document.forms ["input"].value;
+if (input < 0 && input > 255)  // this is the code I need to change
+{
+alert("Must enteer a valid number");
+return false;
+}
+</script>
+    
+
+<script>
+let input = document.getElementById("input");
+let btn = document.getElementById("btn");
+let box = document.getElementById("box");
+let colorREd= 255; 
+		
+let displayOutput = function () {
+let data = input.value;
+			
+output.innerHTML += data + "<br>";
+};
+		
+btn.addEventListener("click",displayOutput,false);
+
+function clickHandler() 
+    {
+		
+box.style.backgroundColor = "rgb(" + (colorRed-=10) + ", 0, 0)";
+
+	}	
+    
+</script>
+
+
+
+</body>
+</html>
